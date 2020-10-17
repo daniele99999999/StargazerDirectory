@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  StargazerDirectory
+
+  Created by daniele on 15/10/2020.
+  Copyright © 2020 DeeplyMadStudio. All rights reserved.
+*/
+
+"search.title" = "Search";
+"list.title" = "List";
