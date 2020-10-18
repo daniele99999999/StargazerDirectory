@@ -12,7 +12,7 @@ public struct StargazerModel: Codable, Equatable
 {
     public let id: Int
     public let username: String?
-    public let avatar: URL?
+    public let avatar: String?
     
     enum CodingKeys: String, CodingKey
     {

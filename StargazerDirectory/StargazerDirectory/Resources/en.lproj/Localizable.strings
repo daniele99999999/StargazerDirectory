@@ -6,5 +6,9 @@
   Copyright © 2020 DeeplyMadStudio. All rights reserved.
 */
 
+"Error.message.title" = "Attention!";
+"Validator.rule.mandatory.error" = "Field is mandatory";
+"Validator.rule.withoutWhitespaces.error" = "Field contains Whitespaces";
+
 "search.title" = "Search";
 "list.title" = "List";

@@ -24,6 +24,7 @@ struct AppResolver: DependencyResolverProtocol
     
     func resolve() -> AppConfigModel
     {
-        return AppConfigModel(baseURL: URL(string: "https://api.github.com/")!)
+        return AppConfigModel(baseURL: URL(string: "https://api.github.com/")!,
+                              errorMessageTitle: NSLocalizedString("Error.message.title", comment: ""))
     }
 }

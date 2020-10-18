@@ -11,6 +11,8 @@ import Common
 
 public class ListViewController: UIViewController
 {
+    @IBOutlet weak var tableView: UITableView!
+    
     var presenter: ListPresenter!
     
     public class func createOne() -> ListViewController

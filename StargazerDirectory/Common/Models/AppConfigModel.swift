@@ -11,10 +11,12 @@ import Foundation
 public struct AppConfigModel
 {
     public let baseURL: URL
+    public let errorMessageTitle: String
     
-    public init(baseURL: URL)
+    public init(baseURL: URL, errorMessageTitle: String)
     {
         self.baseURL = baseURL
+        self.errorMessageTitle = errorMessageTitle
     }
 }
 

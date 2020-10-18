@@ -21,6 +21,13 @@ public struct DirectoryCoordinator
         self.resolver = resolver
     }
     
+    public func showError(message: String)
+    {
+        let appConfig: AppConfigModel = self.resolver.resolve()
+        let alert = UIAlertController.init(title: appConfig.errorMessageTitle, message: message, preferredStyle: .alert)
+        self.rootController?.present(alert, animated: true, completion: nil)
+    }
+    
     public func showSearch()
     {
         let vc: SearchViewController = self.resolver.resolve()
@@ -44,13 +51,15 @@ extension DirectoryCoordinator: CoordinatorProtocol
 
 extension DirectoryCoordinator: SearchPresenterProtocol
 {
+    public func showError(value: String)
+    {
+        self.showError(message: value)
+    }
+    
     public func navigateList(owner: String, repository: String)
     {
         self.showList(owner: owner, repository: repository)
     }
 }
 
-extension DirectoryCoordinator: ListPresenterProtocol
-{
-    
-}
+extension DirectoryCoordinator: ListPresenterProtocol {}

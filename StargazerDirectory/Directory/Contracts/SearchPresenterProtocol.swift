@@ -12,10 +12,11 @@ public typealias SearchPresenterProtocol = SearchPresenterViewProtocol & SearchP
 
 public protocol SearchPresenterViewProtocol
 {
-    // TODO
+    
 }
 
 public protocol SearchPresenterCoordinatorProtocol
 {
     func navigateList(owner: String, repository: String)
+    func showError(value: String)
 }

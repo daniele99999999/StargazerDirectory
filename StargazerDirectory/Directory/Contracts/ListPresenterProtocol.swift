@@ -15,7 +15,4 @@ public protocol ListPresenterViewProtocol
     // TODO
 }
 
-public protocol ListPresenterCoordinatorProtocol
-{
-    // TODO
-}
+public protocol ListPresenterCoordinatorProtocol {}
