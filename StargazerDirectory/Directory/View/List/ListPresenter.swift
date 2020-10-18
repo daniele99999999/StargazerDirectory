@@ -8,14 +8,14 @@
 
 import Foundation
 
-public protocol ListPresenterViewProtocol
+public protocol ListPresenterViewProtocol: class
 {
     // TODO
 }
 
-public protocol ListPresenterCoordinatorProtocol {}
+public protocol ListPresenterCoordinatorProtocol: class {}
 
-public struct ListPresenter
+public class ListPresenter
 {
     
 }

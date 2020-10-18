@@ -54,7 +54,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="goButtonPressed" destination="WH6-3i-TZy" eventType="touchUpInside" id="H9t-7b-uEH"/>
+                                                    <action selector="searchButtonButtonPressed" destination="WH6-3i-TZy" eventType="touchUpInside" id="Xes-qH-cT6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -79,11 +79,11 @@
                         <viewLayoutGuide key="safeArea" id="P0U-x3-0sp"/>
                     </view>
                     <connections>
-                        <outlet property="goButton" destination="Sqt-2j-jtO" id="q8P-zt-Spr"/>
                         <outlet property="ownerField" destination="Z5A-ja-vUY" id="uj0-tU-LKC"/>
                         <outlet property="ownerLabel" destination="IWi-Fj-ma0" id="2vD-fx-6cc"/>
-                        <outlet property="usernameField" destination="rm9-eV-deq" id="cWb-bS-hXW"/>
-                        <outlet property="usernameLabel" destination="DEq-wn-dTR" id="eYx-4l-fp5"/>
+                        <outlet property="repositoryField" destination="rm9-eV-deq" id="8lC-Lh-24f"/>
+                        <outlet property="repositoryLabel" destination="DEq-wn-dTR" id="ks2-TA-cPx"/>
+                        <outlet property="searchButton" destination="Sqt-2j-jtO" id="iGX-az-QmK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8C9-63-9bT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

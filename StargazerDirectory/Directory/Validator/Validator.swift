@@ -11,15 +11,15 @@ import Common
 
 public struct Validator: ValidationProtocol
 {
-    public func validate(input: String, rules: [ValidationRuleProtocol]) -> ValidationResult
+    public let rules: [ValidationRuleProtocol]
+    
+    public func validate(input: String) -> ValidationResult
     {
-        let errors = rules.map()
+        let results = self.rules.map()
         { (rule) -> Bool in
             return rule.validate(input: input)
         }
         
-        return ValidationResult(errors: errors, isValid: self.isValid(errors: errors))
+        return ValidationResult(results: results, isValid: self.isValid(results: results))
     }
-    
-    public init() {}
 }

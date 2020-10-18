@@ -12,4 +12,10 @@ public struct SearchModel: Codable, Equatable
 {
     let owner: String
     let repository: String
+    
+    public init(owner: String, repository: String)
+    {
+        self.owner = owner
+        self.repository = repository
+    }
 }

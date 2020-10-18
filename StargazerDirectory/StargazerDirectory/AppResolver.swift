@@ -22,14 +22,8 @@ struct AppResolver: DependencyResolverProtocol
         return ApiService(baseURL: self.resolve().baseURL, networkService: self.resolve())
     }
     
-    func resolve() -> ValidationProtocol
-    {
-        return Validator()
-    }
-    
     func resolve() -> AppConfigModel
     {
-        return AppConfigModel(baseURL: URL(string: "https://api.github.com/")!,
-                              errorMessageTitle: NSLocalizedString("Error.message.title", comment: ""))
+        return AppConfigModel(baseURL: URL(string: "https://api.github.com/")!)
     }
 }

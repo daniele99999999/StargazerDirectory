@@ -8,25 +8,24 @@
 
 import Foundation
 
-enum SearchViewData {}
+public enum SearchViewData {}
 
 extension SearchViewData
 {
-    struct MainViewData: Codable
+    public struct MainViewData: Codable
     {
         let title: String
         let owner: String
         let repository: String
-        let go: String
+        let search: String
     }
 }
 
 extension SearchViewData
 {
-    struct EditingViewData: Codable, Equatable
+    public struct EditingViewData: Codable, Equatable
     {
         let owner: String
         let repository: String
     }
 }
-

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Common
 
-public struct DirectoryCoordinator
+public class DirectoryCoordinator
 {
     weak var rootController: UINavigationController?
     let resolver: DependencyResolverProtocol
@@ -21,10 +21,10 @@ public struct DirectoryCoordinator
         self.resolver = resolver
     }
     
-    public func showError(message: String)
+    public func showError(title: String, message: String)
     {
-        let appConfig: AppConfigModel = self.resolver.resolve()
-        let alert = UIAlertController.init(title: appConfig.errorMessageTitle, message: message, preferredStyle: .alert)
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Error.button.ok.title", bundle: Bundle(for: Self.self), comment: ""), style: .default, handler: nil))
         self.rootController?.present(alert, animated: true, completion: nil)
     }
     
@@ -51,12 +51,12 @@ extension DirectoryCoordinator: CoordinatorProtocol
 
 extension DirectoryCoordinator: SearchPresenterCoordinatorProtocol
 {
-    public func showError(value: String)
+    public func navigateToError(title: String, message: String)
     {
-        self.showError(message: value)
+        self.showError(title: title, message: message)
     }
     
-    public func navigateList(search: SearchModel)
+    public func navigateToList(search: SearchModel)
     {
         self.showList(search: search)
     }

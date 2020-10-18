@@ -13,9 +13,9 @@ public class SearchViewController: UIViewController
 {
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var ownerField: UITextField!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var repositoryLabel: UILabel!
+    @IBOutlet weak var repositoryField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     
     var presenter: SearchPresenter!
     
@@ -30,6 +30,8 @@ public class SearchViewController: UIViewController
         super.viewDidLoad()
         
         self.setupUI()
+        
+        self.presenter.setup()
     }
     
     override public func viewWillAppear(_ animated: Bool)
@@ -38,6 +40,13 @@ public class SearchViewController: UIViewController
         
         self.showBackArrowOnly()
     }
+    
+    public override func viewDidDisappear(_ animated: Bool)
+    {
+        super.viewDidDisappear(animated)
+        
+        self.presenter.reset()
+    }
 }
 
 private extension SearchViewController
@@ -45,21 +54,33 @@ private extension SearchViewController
     func setupUI()
     {
         self.view.backgroundColor = .white
-        
     }
 }
 
 private extension SearchViewController
 {
-    @IBAction func goButtonPressed()
+    @IBAction func searchButtonButtonPressed()
     {
         self.view.endEditing(true)
         
-        // TODO
+        self.presenter.search(owner: self.ownerField.text ?? "",
+                              repository: self.repositoryField.text ?? "")
     }
 }
 
 extension SearchViewController: SearchPresenterViewProtocol
 {
+    public func updateMain(viewData: SearchViewData.MainViewData)
+    {
+        self.title = viewData.title
+        self.ownerLabel.text = viewData.owner
+        self.repositoryLabel.text = viewData.repository
+        self.searchButton.setTitle(viewData.search, for: .normal)
+    }
     
+    public func updateEditing(viewData: SearchViewData.EditingViewData)
+    {
+        self.ownerField.text = viewData.owner
+        self.repositoryField.text = viewData.repository
+    }
 }

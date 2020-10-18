@@ -6,9 +6,13 @@
   Copyright © 2020 DeeplyMadStudio. All rights reserved.
 */
 
-"Error.message.title" = "Attention!";
+"Error.message.title" = "Error";
+"Error.button.ok.title" = "OK";
 "Validator.rule.mandatory.error" = "Field is mandatory";
 "Validator.rule.withoutWhitespaces.error" = "Field contains Whitespaces";
 
 "search.title" = "Search";
+"search.owner.label" = "Owner";
+"search.repository.label" = "Repository";
+"search.button.label" = "Search!";
 "list.title" = "List";
