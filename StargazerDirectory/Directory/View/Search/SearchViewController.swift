@@ -11,6 +11,12 @@ import Common
 
 public class SearchViewController: UIViewController
 {
+    @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var ownerField: UITextField!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var goButton: UIButton!
+    
     var presenter: SearchPresenter!
     
     public class func createOne() -> SearchViewController
@@ -23,7 +29,7 @@ public class SearchViewController: UIViewController
     {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .red
+        self.setupUI()
     }
     
     override public func viewWillAppear(_ animated: Bool)
@@ -32,4 +38,28 @@ public class SearchViewController: UIViewController
         
         self.showBackArrowOnly()
     }
+}
+
+private extension SearchViewController
+{
+    func setupUI()
+    {
+        self.view.backgroundColor = .white
+        
+    }
+}
+
+private extension SearchViewController
+{
+    @IBAction func goButtonPressed()
+    {
+        self.view.endEditing(true)
+        
+        // TODO
+    }
+}
+
+extension SearchViewController: SearchPresenterViewProtocol
+{
+    
 }

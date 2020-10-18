@@ -11,14 +11,15 @@ import Common
 
 extension DependencyResolverProtocol
 {
-    func resolve() -> SearchViewController
+    func resolve(coordinator: SearchPresenterCoordinatorProtocol) -> SearchViewController
     {
         let vc = SearchViewController.createOne()
-        vc.presenter = SearchPresenter()
+        vc.presenter = SearchPresenter(viewDelegate: vc,
+                                       coordinatorDelegate: coordinator)
         return vc
     }
 
-    func resolve(owner: String, repository: String) ->  ListViewController
+    func resolve(coordinator: ListPresenterCoordinatorProtocol, search: SearchModel) ->  ListViewController
     {
         let vc = ListViewController.createOne()
         vc.presenter = ListPresenter()

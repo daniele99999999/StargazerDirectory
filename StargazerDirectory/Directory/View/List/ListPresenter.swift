@@ -8,6 +8,13 @@
 
 import Foundation
 
+public protocol ListPresenterViewProtocol
+{
+    // TODO
+}
+
+public protocol ListPresenterCoordinatorProtocol {}
+
 public struct ListPresenter
 {
     

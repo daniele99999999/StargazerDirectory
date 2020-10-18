@@ -30,13 +30,13 @@ public struct DirectoryCoordinator
     
     public func showSearch()
     {
-        let vc: SearchViewController = self.resolver.resolve()
+        let vc: SearchViewController = self.resolver.resolve(coordinator: self)
         self.rootController?.pushViewController(vc, animated: false)
     }
     
-    public func showList(owner: String, repository: String)
+    public func showList(search: SearchModel)
     {
-        let vc: ListViewController = self.resolver.resolve(owner: owner, repository: repository)
+        let vc: ListViewController = self.resolver.resolve(coordinator: self, search: search)
         self.rootController?.pushViewController(vc, animated: true)
     }
 }
@@ -49,17 +49,17 @@ extension DirectoryCoordinator: CoordinatorProtocol
     }
 }
 
-extension DirectoryCoordinator: SearchPresenterProtocol
+extension DirectoryCoordinator: SearchPresenterCoordinatorProtocol
 {
     public func showError(value: String)
     {
         self.showError(message: value)
     }
     
-    public func navigateList(owner: String, repository: String)
+    public func navigateList(search: SearchModel)
     {
-        self.showList(owner: owner, repository: repository)
+        self.showList(search: search)
     }
 }
 
-extension DirectoryCoordinator: ListPresenterProtocol {}
+extension DirectoryCoordinator: ListPresenterCoordinatorProtocol {}

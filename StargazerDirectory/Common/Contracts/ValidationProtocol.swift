@@ -8,7 +8,17 @@
 
 import Foundation
 
+public typealias ValidationResult = (errors: [Bool], isValid: Bool)
+
 public protocol ValidationProtocol
 {
-    func validate(input: String, rules: [ValidationRuleProtocol]) -> [Bool]
+    func validate(input: String, rules: [ValidationRuleProtocol]) -> ValidationResult
+}
+
+extension ValidationProtocol
+{
+    public func isValid(errors: [Bool]) -> Bool
+    {
+        return !errors.contains(false)
+    }
 }

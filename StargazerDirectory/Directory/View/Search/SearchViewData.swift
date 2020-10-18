@@ -17,6 +17,7 @@ extension SearchViewData
         let title: String
         let owner: String
         let repository: String
+        let go: String
     }
 }
 
@@ -26,20 +27,6 @@ extension SearchViewData
     {
         let owner: String
         let repository: String
-    }
-}
-
-extension SearchViewData
-{
-    struct ErrorsViewData: Codable
-    {
-        let owner: [String]
-        let repository: [String]
-        
-        var noErrors: Bool
-        {
-            return self.owner.isEmpty && self.repository.isEmpty
-        }
     }
 }
 

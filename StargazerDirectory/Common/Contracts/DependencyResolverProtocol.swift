@@ -12,5 +12,6 @@ public protocol DependencyResolverProtocol
 {
     func resolve() -> NetworkProtocol
     func resolve() -> APIProtocol
+    func resolve() -> ValidationProtocol
     func resolve() -> AppConfigModel
 }

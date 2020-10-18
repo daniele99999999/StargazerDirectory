@@ -12,6 +12,7 @@ import Common
 public class ListViewController: UIViewController
 {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityPageIndicator: UIActivityIndicatorView!
     
     var presenter: ListPresenter!
     
@@ -25,7 +26,7 @@ public class ListViewController: UIViewController
     {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .green
+        self.setupUI()
     }
     
     override public func viewWillAppear(_ animated: Bool)
@@ -36,3 +37,14 @@ public class ListViewController: UIViewController
     }
 }
 
+private extension ListViewController
+{
+    func setupUI()
+    {
+        self.view.backgroundColor = .white
+//        self.tableView.dataSource = dataSource
+//        self.tableView.delegate = self
+        self.tableView.contentInset = .init(top: 0, left: 0, bottom: 116, right: 0)
+        self.activityPageIndicator.startAnimating()
+    }
+}
