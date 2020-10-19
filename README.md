@@ -1,4 +1,4 @@
-﻿
+
 # StargazerDirectory
 
 ## Descrizione
@@ -46,4 +46,4 @@ E' sufficiente clonare il repository, posizionarsi nella cartella dove risulta p
 Daniele99999999
 
 ## Licenza
-PokemonDirectory è disponibile con la licenza MIT. Vedere il file LICENSE per maggiori informazioni
+StargazerDirectory è disponibile con la licenza MIT. Vedere il file LICENSE per maggiori informazioni
