@@ -10,7 +10,7 @@ import Foundation
 
 public protocol APIProtocol
 {
-    func apiGetList(owner: String, repository: String, elementPerPage: Int, page: Int, completion: @escaping (Result<[StargazerModel], Error>) -> Void)
+    func getList(owner: String, repository: String, elementPerPage: Int, page: Int, completion: @escaping (Result<[StargazerModel], Error>) -> Void)
 }
 
 public protocol APIHandleResponseProtocol

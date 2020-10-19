@@ -54,10 +54,10 @@ public class ListPresenter
         self.viewDelegate?.updateMain(viewData: Self.buildMainViewData(search: self.search))
         self.viewDelegate?.updateActivityStart()
         
-        self.apiService.apiGetList(owner: self.search.owner,
-                                   repository: self.search.repository,
-                                   elementPerPage: self.elementPerPage,
-                                   page: self.page)
+        self.apiService.getList(owner: self.search.owner,
+                                repository: self.search.repository,
+                                elementPerPage: self.elementPerPage,
+                                page: self.page)
         { (result: Result<[StargazerModel], Error>) in
             DispatchQueue.main.async
             { [weak self] in

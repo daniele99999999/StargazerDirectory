@@ -7,10 +7,11 @@
 //
 
 import Foundation
-import Common
 
 public struct ValidationMandatoryRule: ValidationRuleProtocol
 {
+    public init() {}
+    
     public func validate(input: String) -> Bool
     {
         return !input.isEmpty

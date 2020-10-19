@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Common
 
 enum NetworkError: Error
 {

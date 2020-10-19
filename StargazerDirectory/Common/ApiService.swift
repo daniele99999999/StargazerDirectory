@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Common
 
 public struct ApiService
 {
@@ -56,7 +55,7 @@ public struct ApiService
 extension ApiService: APIHandleResponseProtocol {}
 extension ApiService: APIProtocol
 {
-    public func apiGetList(owner: String, repository: String, elementPerPage: Int, page: Int, completion: @escaping (Result<[StargazerModel], Error>) -> Void)
+    public func getList(owner: String, repository: String, elementPerPage: Int, page: Int, completion: @escaping (Result<[StargazerModel], Error>) -> Void)
     {
         let url = Endpoints.list(owner: owner, repository: repository).url(baseURL: self.baseURL)
         let queryItems = [URLQueryItem(name: "page", value: String(page)),

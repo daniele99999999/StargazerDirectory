@@ -7,11 +7,15 @@
 //
 
 import Foundation
-import Common
 
 public struct Validator: ValidationProtocol
 {
     public let rules: [ValidationRuleProtocol]
+    
+    public init(rules: [ValidationRuleProtocol])
+    {
+        self.rules = rules
+    }
     
     public func validate(input: String) -> ValidationResult
     {
