@@ -121,21 +121,21 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G11-Ic-uv0">
-                                                            <rect key="frame" x="16" y="8" width="100.5" height="100.5"/>
+                                                            <rect key="frame" x="16" y="8" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="G11-Ic-uv0" secondAttribute="height" multiplier="1:1" id="V5X-98-vt0"/>
                                                                 <constraint firstAttribute="height" constant="100" id="sOu-FW-OST"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGO-ix-m4E">
-                                                            <rect key="frame" x="124.5" y="48" width="273.5" height="21"/>
+                                                            <rect key="frame" x="124" y="48" width="274" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="G11-Ic-uv0" secondAttribute="bottom" constant="8" id="1av-gQ-ndT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="G11-Ic-uv0" secondAttribute="bottom" priority="999" constant="8" id="1av-gQ-ndT"/>
                                                         <constraint firstAttribute="trailing" secondItem="cGO-ix-m4E" secondAttribute="trailing" constant="16" id="F1Y-PZ-qyA"/>
                                                         <constraint firstItem="cGO-ix-m4E" firstAttribute="centerY" secondItem="muv-bL-XgR" secondAttribute="centerY" id="Yf8-8J-g2h"/>
                                                         <constraint firstItem="cGO-ix-m4E" firstAttribute="leading" secondItem="G11-Ic-uv0" secondAttribute="trailing" constant="8" id="ahI-PJ-cZo"/>
