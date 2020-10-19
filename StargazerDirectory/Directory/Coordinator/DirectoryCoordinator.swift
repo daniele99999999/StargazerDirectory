@@ -30,13 +30,13 @@ public class DirectoryCoordinator
     
     public func showSearch()
     {
-        let vc: SearchViewController = self.resolver.resolve(coordinator: self)
+        let vc: SearchViewController = self.resolver.resolve(coordinatorDelegate: self)
         self.rootController?.pushViewController(vc, animated: false)
     }
     
     public func showList(search: SearchModel)
     {
-        let vc: ListViewController = self.resolver.resolve(coordinator: self, search: search)
+        let vc: ListViewController = self.resolver.resolve(coordinatorDelegate: self, search: search)
         self.rootController?.pushViewController(vc, animated: true)
     }
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2020 DeeplyMadStudio. All rights reserved.
 //
 
+// TODO do a test specific target for all mocks and related stuff
 import Foundation
-@testable import Common
 
 class NetworkServiceMock: NetworkProtocol
 {

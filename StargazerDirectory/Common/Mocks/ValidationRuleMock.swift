@@ -6,14 +6,14 @@
 //  Copyright © 2020 DeeplyMadStudio. All rights reserved.
 //
 
+// TODO do a test specific target for all mocks and related stuff
 import Foundation
-@testable import Common
 
 struct ValidationRuleMock: ValidationRuleProtocol
 {
-    var _validate:(((String) -> Bool) -> Void)?
+    var _valid: Bool!
     func validate(input: String) -> Bool
     {
-        return !input.isEmpty
+        return _valid
     }
 }

@@ -11,10 +11,9 @@ import XCTest
 
 class ApiDecodingTests: XCTestCase
 {
-    var stargazerModelsDataMock: Data = StorageUtils.loadJSON(name: "StargazerModelsMock", bundle: Bundle(for: ApiDecodingTests.self))!
-    
     func testDecodingApiList()
     {
+        let stargazerModelsDataMock: Data = StorageUtils.loadJSON(name: "StargazerModelsMock", bundle: Bundle(for: ApiDecodingTests.self))!
         let url = URL(string: "https://www.google.com")!
         let owner = "owner"
         let repository =  "repository"
@@ -24,7 +23,7 @@ class ApiDecodingTests: XCTestCase
         let expectation = self.expectation(description: "testDecodingApiList")
         let networkServiceMock = NetworkServiceMock()
         networkServiceMock._networkDataTask = { _, completion in
-            completion(.success(self.stargazerModelsDataMock))
+            completion(.success(stargazerModelsDataMock))
         }
 
         let apiService: ApiService = ApiService(baseURL: url,

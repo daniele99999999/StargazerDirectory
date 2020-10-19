@@ -44,15 +44,20 @@
 		64609442253D36CD004ADF30 /* StorageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609432253D30DC004ADF30 /* StorageUtils.swift */; };
 		64609443253D36D0004ADF30 /* StargazerModelsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 64609439253D3406004ADF30 /* StargazerModelsMock.json */; };
 		64609445253D36E7004ADF30 /* ApiDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609444253D36E7004ADF30 /* ApiDecodingTests.swift */; };
-		64609447253D376B004ADF30 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609446253D376B004ADF30 /* NetworkServiceMock.swift */; };
 		64609448253D385F004ADF30 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A59333253B46210021E104 /* ApiService.swift */; };
-		6460944A253D3A1A004ADF30 /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609449253D3A1A004ADF30 /* ApiServiceMock.swift */; };
-		6460944D253D3B60004ADF30 /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460944C253D3B60004ADF30 /* DirectoryTests.swift */; };
 		6460944F253D3EEA004ADF30 /* ValidationMandatoryRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460941D253C867C004ADF30 /* ValidationMandatoryRule.swift */; };
 		64609450253D3EED004ADF30 /* ValidationWithoutWhitespaceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609421253C91FA004ADF30 /* ValidationWithoutWhitespaceRule.swift */; };
 		64609451253D3EF1004ADF30 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609428253C9C11004ADF30 /* Validator.swift */; };
 		64609453253D4063004ADF30 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609452253D4063004ADF30 /* ValidatorTests.swift */; };
-		64609455253D40E9004ADF30 /* ValidationRuleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609454253D40E9004ADF30 /* ValidationRuleMock.swift */; };
+		64609457253D6DD7004ADF30 /* ListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609456253D6DD7004ADF30 /* ListPresenterTests.swift */; };
+		64609459253D6DFC004ADF30 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609458253D6DFC004ADF30 /* SearchPresenterTests.swift */; };
+		6460945B253D7424004ADF30 /* SearchPresenterViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460945A253D7424004ADF30 /* SearchPresenterViewMock.swift */; };
+		6460945D253D7465004ADF30 /* SearchPresenterCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460945C253D7465004ADF30 /* SearchPresenterCoordinatorMock.swift */; };
+		6460945F253D87A9004ADF30 /* ListPresenterViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460945E253D87A9004ADF30 /* ListPresenterViewMock.swift */; };
+		64609461253D87BB004ADF30 /* ListPresenterCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609460253D87BB004ADF30 /* ListPresenterCoordinatorMock.swift */; };
+		647236D7253DC07000B6B61D /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609446253D376B004ADF30 /* NetworkServiceMock.swift */; };
+		647236D8253DC07300B6B61D /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609449253D3A1A004ADF30 /* ApiServiceMock.swift */; };
+		647236D9253DC07600B6B61D /* ValidationRuleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609454253D40E9004ADF30 /* ValidationRuleMock.swift */; };
 		64A59318253AE0A40021E104 /* AppConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A59317253AE0A30021E104 /* AppConfigModel.swift */; };
 		64A5931A253AF5D80021E104 /* DependencyResolverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A59319253AF5D80021E104 /* DependencyResolverProtocol.swift */; };
 		64A5931C253B04C20021E104 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5931B253B04C20021E104 /* NetworkProtocol.swift */; };
@@ -191,9 +196,14 @@
 		64609444253D36E7004ADF30 /* ApiDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDecodingTests.swift; sourceTree = "<group>"; };
 		64609446253D376B004ADF30 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		64609449253D3A1A004ADF30 /* ApiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceMock.swift; sourceTree = "<group>"; };
-		6460944C253D3B60004ADF30 /* DirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTests.swift; sourceTree = "<group>"; };
 		64609452253D4063004ADF30 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		64609454253D40E9004ADF30 /* ValidationRuleMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRuleMock.swift; sourceTree = "<group>"; };
+		64609456253D6DD7004ADF30 /* ListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTests.swift; sourceTree = "<group>"; };
+		64609458253D6DFC004ADF30 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		6460945A253D7424004ADF30 /* SearchPresenterViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterViewMock.swift; sourceTree = "<group>"; };
+		6460945C253D7465004ADF30 /* SearchPresenterCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterCoordinatorMock.swift; sourceTree = "<group>"; };
+		6460945E253D87A9004ADF30 /* ListPresenterViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterViewMock.swift; sourceTree = "<group>"; };
+		64609460253D87BB004ADF30 /* ListPresenterCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterCoordinatorMock.swift; sourceTree = "<group>"; };
 		64A59317253AE0A30021E104 /* AppConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModel.swift; sourceTree = "<group>"; };
 		64A59319253AF5D80021E104 /* DependencyResolverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolverProtocol.swift; sourceTree = "<group>"; };
 		64A5931B253B04C20021E104 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
@@ -428,6 +438,7 @@
 				642974122537B7A30022211B /* Contracts */,
 				642974132537B7B80022211B /* Models */,
 				64609427253C9BFD004ADF30 /* Validator */,
+				6460943B253D3487004ADF30 /* Mocks */,
 				64A59331253B45AF0021E104 /* NetworkService.swift */,
 				64A59333253B46210021E104 /* ApiService.swift */,
 				642974332538283A0022211B /* Common.h */,
@@ -441,7 +452,6 @@
 			children = (
 				64609431253D30C6004ADF30 /* Utils */,
 				64609436253D338B004ADF30 /* Resources */,
-				6460943B253D3487004ADF30 /* Mocks */,
 				64609444253D36E7004ADF30 /* ApiDecodingTests.swift */,
 				64609452253D4063004ADF30 /* ValidatorTests.swift */,
 				642974422538283A0022211B /* Info.plist */,
@@ -467,7 +477,8 @@
 			isa = PBXGroup;
 			children = (
 				6460944E253D3E96004ADF30 /* Mocks */,
-				6460944C253D3B60004ADF30 /* DirectoryTests.swift */,
+				64609458253D6DFC004ADF30 /* SearchPresenterTests.swift */,
+				64609456253D6DD7004ADF30 /* ListPresenterTests.swift */,
 				642974652538286A0022211B /* Info.plist */,
 			);
 			path = DirectoryTests;
@@ -545,6 +556,10 @@
 		6460944E253D3E96004ADF30 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				6460945A253D7424004ADF30 /* SearchPresenterViewMock.swift */,
+				6460945C253D7465004ADF30 /* SearchPresenterCoordinatorMock.swift */,
+				6460945E253D87A9004ADF30 /* ListPresenterViewMock.swift */,
+				64609460253D87BB004ADF30 /* ListPresenterCoordinatorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1006,6 +1021,7 @@
 				64609448253D385F004ADF30 /* ApiService.swift in Sources */,
 				64A59318253AE0A40021E104 /* AppConfigModel.swift in Sources */,
 				64609450253D3EED004ADF30 /* ValidationWithoutWhitespaceRule.swift in Sources */,
+				647236D7253DC07000B6B61D /* NetworkServiceMock.swift in Sources */,
 				6460942B253CB77E004ADF30 /* SearchModel.swift in Sources */,
 				6460941C253C85F9004ADF30 /* ValidationRuleProtocol.swift in Sources */,
 				6460944F253D3EEA004ADF30 /* ValidationMandatoryRule.swift in Sources */,
@@ -1018,8 +1034,10 @@
 				64609441253D3634004ADF30 /* NetworkService.swift in Sources */,
 				64A5932E253B38160021E104 /* CommonTypes.swift in Sources */,
 				64609412253BA53B004ADF30 /* StargazerModel.swift in Sources */,
+				647236D9253DC07600B6B61D /* ValidationRuleMock.swift in Sources */,
 				6429748025390CA90022211B /* UIViewController+BackArrowOnly.swift in Sources */,
 				6429747F25390CA90022211B /* UIView+Autolayout.swift in Sources */,
+				647236D8253DC07300B6B61D /* ApiServiceMock.swift in Sources */,
 				6429747E25390CA90022211B /* UiViewController+UIStoryboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1028,12 +1046,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64609455253D40E9004ADF30 /* ValidationRuleMock.swift in Sources */,
-				6460944A253D3A1A004ADF30 /* ApiServiceMock.swift in Sources */,
 				64609453253D4063004ADF30 /* ValidatorTests.swift in Sources */,
 				64609445253D36E7004ADF30 /* ApiDecodingTests.swift in Sources */,
 				64609442253D36CD004ADF30 /* StorageUtils.swift in Sources */,
-				64609447253D376B004ADF30 /* NetworkServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1058,7 +1073,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6460944D253D3B60004ADF30 /* DirectoryTests.swift in Sources */,
+				64609459253D6DFC004ADF30 /* SearchPresenterTests.swift in Sources */,
+				64609461253D87BB004ADF30 /* ListPresenterCoordinatorMock.swift in Sources */,
+				6460945B253D7424004ADF30 /* SearchPresenterViewMock.swift in Sources */,
+				64609457253D6DD7004ADF30 /* ListPresenterTests.swift in Sources */,
+				6460945F253D87A9004ADF30 /* ListPresenterViewMock.swift in Sources */,
+				6460945D253D7465004ADF30 /* SearchPresenterCoordinatorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1170,6 +1190,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;

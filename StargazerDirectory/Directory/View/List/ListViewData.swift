@@ -32,6 +32,15 @@ extension ListViewData
                 return indexPaths.count
             }
         }
+        
+        var value: [IndexPath]
+        {
+            switch self
+            {
+            case let .insert(indexPaths):
+                return indexPaths
+            }
+        }
     }
     
     public struct CellViewData: Codable, Equatable
