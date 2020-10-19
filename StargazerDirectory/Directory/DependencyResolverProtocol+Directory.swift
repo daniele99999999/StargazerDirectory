@@ -22,7 +22,11 @@ extension DependencyResolverProtocol
     func resolve(coordinator: ListPresenterCoordinatorProtocol, search: SearchModel) ->  ListViewController
     {
         let vc = ListViewController.createOne()
-        vc.presenter = ListPresenter()
+        vc.presenter = ListPresenter(viewDelegate: vc,
+                                     coordinatorDelegate: coordinator,
+                                     apiService: self.resolve(),
+                                     search: search)
+        vc.dataSource = ListViewDatasource(provider: vc.presenter)
         return vc
     }
 }

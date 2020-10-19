@@ -15,7 +15,7 @@ public struct ApiService
     {
         case list(owner: String, repository: String)
         
-        var path: String
+        var pathPre: String
         {
             switch self
             {
@@ -24,12 +24,21 @@ public struct ApiService
             }
         }
         
+        var pathPost: String
+        {
+            switch self
+            {
+            case .list:
+                return "stargazers"
+            }
+        }
+        
         func url(baseURL: URL) -> URL
         {
             switch self
             {
             case .list(let owner, let repository):
-                return baseURL.appendingPathComponent(self.path).appendingPathComponent(owner).appendingPathComponent(repository)
+                return baseURL.appendingPathComponent(self.pathPre).appendingPathComponent(owner).appendingPathComponent(repository).appendingPathComponent(self.pathPost)
             }
         }
     }

@@ -44,6 +44,7 @@
 		64609429253C9C11004ADF30 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64609428253C9C11004ADF30 /* Validator.swift */; };
 		6460942B253CB77E004ADF30 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460942A253CB77E004ADF30 /* SearchModel.swift */; };
 		6460942E253CF5E6004ADF30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 642974272537BC130022211B /* Localizable.strings */; };
+		64609430253D1C5B004ADF30 /* ListViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6460942F253D1C5A004ADF30 /* ListViewDatasource.swift */; };
 		64A59318253AE0A40021E104 /* AppConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A59317253AE0A30021E104 /* AppConfigModel.swift */; };
 		64A5931A253AF5D80021E104 /* DependencyResolverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A59319253AF5D80021E104 /* DependencyResolverProtocol.swift */; };
 		64A5931C253B04C20021E104 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5931B253B04C20021E104 /* NetworkProtocol.swift */; };
@@ -180,6 +181,7 @@
 		64609425253C9B37004ADF30 /* ValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationProtocol.swift; sourceTree = "<group>"; };
 		64609428253C9C11004ADF30 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		6460942A253CB77E004ADF30 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		6460942F253D1C5A004ADF30 /* ListViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDatasource.swift; sourceTree = "<group>"; };
 		64A59317253AE0A30021E104 /* AppConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModel.swift; sourceTree = "<group>"; };
 		64A59319253AF5D80021E104 /* DependencyResolverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyResolverProtocol.swift; sourceTree = "<group>"; };
 		64A5931B253B04C20021E104 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				642973EE2537B0870022211B /* ListViewController.swift */,
+				6460942F253D1C5A004ADF30 /* ListViewDatasource.swift */,
 				64609413253BB673004ADF30 /* ListViewCell.swift */,
 				64609415253C23A4004ADF30 /* ListViewData.swift */,
 				64A59326253B2D3F0021E104 /* ListPresenter.swift */,
@@ -979,6 +982,7 @@
 				64609429253C9C11004ADF30 /* Validator.swift in Sources */,
 				64609414253BB673004ADF30 /* ListViewCell.swift in Sources */,
 				6460941A253C3F02004ADF30 /* SearchViewData.swift in Sources */,
+				64609430253D1C5B004ADF30 /* ListViewDatasource.swift in Sources */,
 				64A59323253B08410021E104 /* DependencyResolverProtocol+Directory.swift in Sources */,
 				6429748125390CC20022211B /* SearchViewController.swift in Sources */,
 				64A59325253B2D2E0021E104 /* SearchPresenter.swift in Sources */,

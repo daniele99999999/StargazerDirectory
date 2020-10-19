@@ -49,7 +49,7 @@ extension DirectoryCoordinator: CoordinatorProtocol
     }
 }
 
-extension DirectoryCoordinator: SearchPresenterCoordinatorProtocol
+extension DirectoryCoordinator: SearchPresenterCoordinatorProtocol, ListPresenterCoordinatorProtocol
 {
     public func navigateToError(title: String, message: String)
     {
@@ -61,5 +61,3 @@ extension DirectoryCoordinator: SearchPresenterCoordinatorProtocol
         self.showList(search: search)
     }
 }
-
-extension DirectoryCoordinator: ListPresenterCoordinatorProtocol {}

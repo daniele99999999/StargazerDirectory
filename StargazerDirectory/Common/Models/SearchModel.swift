@@ -10,8 +10,8 @@ import Foundation
 
 public struct SearchModel: Codable, Equatable
 {
-    let owner: String
-    let repository: String
+    public let owner: String
+    public let repository: String
     
     public init(owner: String, repository: String)
     {

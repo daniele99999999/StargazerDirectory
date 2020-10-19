@@ -45,10 +45,13 @@ public class SearchPresenter
     fileprivate let validatorOwner: ValidationProtocol
     fileprivate let validatorRepository: ValidationProtocol
     
-//    internal var errorMessages = [ErrorMessage.mandatory(input: "owner"),
-//                                  ErrorMessage.withoutWhitespace(input: "owner")]
+    internal var ownerErrorMessages = [ErrorMessage.mandatory(input: "owner").errorMessage(),
+                                       ErrorMessage.withoutWhitespace(input: "owner").errorMessage()]
+    internal var repositoryErrorMessages = [ErrorMessage.mandatory(input: "repository").errorMessage(),
+                                            ErrorMessage.withoutWhitespace(input: "repository").errorMessage()]
     
-    init(viewDelegate: SearchPresenterViewProtocol?, coordinatorDelegate: SearchPresenterCoordinatorProtocol?)
+    init(viewDelegate: SearchPresenterViewProtocol?,
+         coordinatorDelegate: SearchPresenterCoordinatorProtocol?)
     {
         self.viewDelegate = viewDelegate
         self.coordinatorDelegate = coordinatorDelegate
@@ -58,7 +61,7 @@ public class SearchPresenter
                                                      ValidationWithoutWhitespaceRule()])
     }
     
-    func setup()
+    func loadData()
     {
         self.viewDelegate?.updateMain(viewData: Self.buildMainViewData())
         self.viewDelegate?.updateEditing(viewData: Self.buildEditingViewData())
@@ -90,31 +93,17 @@ private extension SearchPresenter
             // TODO manage configuration error messages coupled with Validator
             
             let ownerMessages = ownerResult.results.enumerated().reduce([])
-            { (result: [String], element: (index: Int, value: Bool)) -> [String] in
+            { [weak self] (result: [String], element: (index: Int, value: Bool)) -> [String] in
+                guard let self = self else { return result }
                 guard !element.value else { return result }
-                switch element.index
-                {
-                case 0:
-                    return result + [ErrorMessage.mandatory(input: "owner").errorMessage()]
-                case 1:
-                    return result + [ErrorMessage.withoutWhitespace(input: "owner").errorMessage()]
-                default:
-                    return result
-                }
+                return element.index < self.ownerErrorMessages.count ? result + [self.ownerErrorMessages[element.index]] : result
             }
             
             let repositoryMessages = repositoryResult.results.enumerated().reduce([])
-            { (result: [String], element: (index: Int, value: Bool)) -> [String] in
+            { [weak self] (result: [String], element: (index: Int, value: Bool)) -> [String] in
+                guard let self = self else { return result }
                 guard !element.value else { return result }
-                switch element.index
-                {
-                case 0:
-                    return result + [ErrorMessage.mandatory(input: "repository").errorMessage()]
-                case 1:
-                    return result + [ErrorMessage.withoutWhitespace(input: "repository").errorMessage()]
-                default:
-                    return result
-                }
+                return element.index < self.repositoryErrorMessages.count ? result + [self.repositoryErrorMessages[element.index]] : result
             }
             
             let globalMessage = (ownerMessages + repositoryMessages).joined(separator: ",\n")

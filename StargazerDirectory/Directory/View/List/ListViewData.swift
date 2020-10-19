@@ -20,6 +20,20 @@ extension ListViewData
 
 extension ListViewData
 {
+    public enum ListDataUpdate: Equatable
+    {
+        case insert([IndexPath])
+        
+        var count: Int
+        {
+            switch self
+            {
+            case let .insert(indexPaths):
+                return indexPaths.count
+            }
+        }
+    }
+    
     public struct CellViewData: Codable, Equatable
     {
         let avatar: String

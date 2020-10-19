@@ -31,7 +31,7 @@ public class SearchViewController: UIViewController
         
         self.setupUI()
         
-        self.presenter.setup()
+        self.presenter.loadData()
     }
     
     override public func viewWillAppear(_ animated: Bool)
