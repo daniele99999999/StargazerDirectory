@@ -45,10 +45,10 @@ private extension ListViewController
     func setupUI()
     {
         self.view.backgroundColor = .white
+        
         self.tableView.dataSource = self.dataSource
         self.tableView.delegate = self
         self.tableView.contentInset = .init(top: 0, left: 0, bottom: 116, right: 0)
-        self.activityPageIndicator.startAnimating()
     }
 }
 
@@ -58,17 +58,18 @@ extension ListViewController: UITableViewDelegate
     {
         guard self.dataSource.isLast(index: indexPath.row) else { return }
             
-        // Added fake delay for show activity
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1)
-        { [weak self] in
-            self?.presenter.loadNextPage()
-        }
+        self.presenter.loadNextPage()
     }
 }
 
 
 extension ListViewController: ListPresenterViewProtocol
 {
+    public func updateMain(viewData: ListViewData.MainViewData)
+    {
+        self.title = viewData.title
+    }
+    
     public func updateCells(viewData: ListViewData.ListDataUpdate)
     {
         self.tableView.beginUpdates()
@@ -80,13 +81,13 @@ extension ListViewController: ListPresenterViewProtocol
         self.tableView.endUpdates()
     }
     
-    public func updateMain(viewData: ListViewData.MainViewData)
+    public func updateActivityStart()
     {
-        self.title = viewData.title
+        self.activityPageIndicator.startAnimating()
     }
     
-    public func updateActivity(isLoading: Bool)
+    public func updateActivityStop()
     {
-        // TODO gestire l'activity
+        self.activityPageIndicator.stopAnimating()
     }
 }

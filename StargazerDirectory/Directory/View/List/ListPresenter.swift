@@ -13,7 +13,8 @@ public protocol ListPresenterViewProtocol: class
 {
     func updateMain(viewData: ListViewData.MainViewData)
     func updateCells(viewData: ListViewData.ListDataUpdate)
-    func updateActivity(isLoading: Bool) // TODO
+    func updateActivityStart()
+    func updateActivityStop()
 }
 
 public protocol ListPresenterCoordinatorProtocol: class
@@ -37,7 +38,7 @@ public class ListPresenter
          coordinatorDelegate: ListPresenterCoordinatorProtocol?,
          apiService: APIProtocol,
          search: SearchModel,
-         elementPerPage: Int = 20,
+         elementPerPage: Int = 20, // TODO: possible to add to AppConfig
          page: Int = 1)
     {
         self.viewDelegate = viewDelegate
@@ -51,6 +52,7 @@ public class ListPresenter
     func loadData()
     {
         self.viewDelegate?.updateMain(viewData: Self.buildMainViewData(search: self.search))
+        self.viewDelegate?.updateActivityStart()
         
         self.apiService.apiGetList(owner: self.search.owner,
                                    repository: self.search.repository,
@@ -68,8 +70,10 @@ public class ListPresenter
                         return IndexPath(item: $0, section: 0)
                     }
                     self.list.append(contentsOf: stargazers)
+                    self.viewDelegate?.updateActivityStop()
                     self.viewDelegate?.updateCells(viewData: ListViewData.ListDataUpdate.insert(indexPaths))
                 case .failure(let error):
+                    self.viewDelegate?.updateActivityStop()
                     self.coordinatorDelegate?.navigateToError(title: NSLocalizedString("Error.message.title", bundle: Bundle(for: Self.self), comment: ""), message: error.localizedDescription)
                 }
             }
